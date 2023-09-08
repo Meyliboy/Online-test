@@ -1,0 +1,3 @@
+_home.scss         // Home specific styles
+_about.scss        // About specific styles
+_contact.scss      // Contact specific styles

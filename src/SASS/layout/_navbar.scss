@@ -1,0 +1,40 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variable";
+$color-white: #eef6e6;
+
+.navbar {
+  width: 100%;
+  &_logo-login {
+    padding: 0 30px;
+    @include mixins.display-beetwen;
+
+    background-color: #076f9f;
+  }
+}
+.navbar_menu {
+  width: 100%;
+  @include mixins.display-center;
+
+  ul {
+    height: 100%;
+    height: 3.5rem;
+    @include mixins.display-beetwen;
+    li {
+      width: 100%;
+      height: 100%;
+    }
+    a {
+      width: 120px;
+      height: 100%;
+      color: $color-white;
+      @include mixins.display-center;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: #015a86af;
+      }
+      &:focus {
+        background-color: #015a86af;
+      }
+    }
+  }
+}
