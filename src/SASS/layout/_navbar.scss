@@ -1,18 +1,20 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variable";
 $color-white: #eef6e6;
+$color-green: #4caf50;
 
 .navbar {
   width: 100%;
-  &_logo-login {
+  &__logo-login {
     padding: 0 30px;
     @include mixins.display-beetwen;
 
     background-color: #076f9f;
   }
 }
-.navbar_menu {
+.navbar__menu {
   width: 100%;
+  box-sizing: border-box;
   @include mixins.display-center;
 
   ul {
@@ -22,6 +24,9 @@ $color-white: #eef6e6;
     li {
       width: 100%;
       height: 100%;
+      .last-link {
+        background-color: $color-green;
+      }
     }
     a {
       width: 120px;
@@ -37,4 +42,29 @@ $color-white: #eef6e6;
       }
     }
   }
+}
+.test {
+  &__link {
+    position: relative;
+  }
+  &__category-box {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -150px;
+    width: 200px;
+    height: auto;
+
+    background-color: $color-green;
+    a {
+      padding: 10px;
+      width: 100% !important;
+      height: 50px !important;
+      justify-content: start !important;
+      border-bottom: 1px solid rgb(255, 255, 255);
+    }
+  }
+}
+.test__link:hover .test__category-box {
+  display: block;
 }
