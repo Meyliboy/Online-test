@@ -1,0 +1,33 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variable";
+$padding-container: 30px;
+$secondary-color: #015a86af;
+$primary-color: #076f9f;
+$color-white: #eef6e6;
+
+.math {
+  &__container {
+    width: 100%;
+    height: auto;
+    gap: 100px;
+    @include mixins.display-beetwen;
+    align-items: start;
+  }
+  &__page-title {
+    @include mixins.display-center;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+  &__test-list {
+    flex: 2;
+    height: auto;
+  }
+  &__top-users {
+    flex: 1;
+    height: auto;
+    background-color: #fff;
+    position: sticky;
+    top: 20px;
+    border-radius: 5px;
+  }
+}
