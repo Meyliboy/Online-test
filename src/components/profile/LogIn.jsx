@@ -1,4 +1,5 @@
 import { Button, Form, Message } from "rsuite";
+import { NavLink } from "react-router-dom";
 
 const LogIn = () => {
   return (
@@ -30,7 +31,9 @@ const LogIn = () => {
                 <Button appearance="primary" color="green">
                   Kirish
                 </Button>
-                <Button appearance="primary">Ro'yhatdan o'tish</Button>
+                <NavLink to={"/register"}>
+                  <Button appearance="primary">Ro'yhatdan o'tish</Button>
+                </NavLink>
               </div>
             </Form.Group>
           </Form>

@@ -1,21 +1,86 @@
-import { Form, ButtonToolbar, Button, Checkbox } from "rsuite";
+import {
+  Form,
+  ButtonToolbar,
+  Button,
+  Checkbox,
+  Placeholder,
+  Modal,
+  RadioGroup,
+  Radio,
+} from "rsuite";
+
+import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Register = () => {
+  const [isForm, setForm] = useState("");
+  const [data, setData] = useState([]);
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => setOpen(false);
+
+  function handleSubmit() {
+    setData(isForm);
+    console.log(data);
+
+    /* Modal */
+    setOpen(true);
+
+    /* render Page */
+    // window.location.reload();
+  }
+
+  useEffect(() => {
+    const createUser = async () => {
+      await axios
+        .post("http://localhost:5000/api/user/register", data)
+        .then((res) => console.log(res));
+    };
+    createUser();
+    console.log("render");
+  }, [data]);
+  const styles = {
+    radioGroupLabel: {
+      padding: "8px 12px",
+      display: "inline-block",
+      verticalAlign: "middle",
+    },
+  };
+
   return (
-    <div>
+    <>
       <div className="login__title">BANNER</div>
+      <Modal keyboard={false} open={open} onClose={handleClose}>
+        <Modal.Body style={{ color: "green" }}>
+          Ro'yhatga olish muvafiyaqatli qugadi! 👍
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleClose} appearance="primary">
+            Ok
+          </Button>
+          <Button onClick={handleClose} appearance="subtle">
+            Cancel
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <div className="login__wrapper">
         <div className="login__container">
           <div className="form__title">Ro'yhatdan o'tish</div>
-          <Form fluid>
+          <Form fluid onChange={(e) => setForm(e)}>
             <Form.Group controlId="name-1">
-              <Form.Control name="name" placeholder="Ism" />
+              <Form.Control name="name" placeholder="Ism" required />
             </Form.Group>
             <Form.Group controlId="name-2">
-              <Form.Control name="lastName" placeholder="Familiya" />
+              <Form.Control name="lastName" placeholder="Familiya" required />
             </Form.Group>
             <Form.Group controlId="email-1">
-              <Form.Control name="email" type="email" placeholder="Email" />
+              <Form.Control
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+              />
               <Form.HelpText>Required</Form.HelpText>
             </Form.Group>
             <Form.Group controlId="password-1" className="last-input">
@@ -24,22 +89,35 @@ const Register = () => {
                 type="password"
                 autoComplete="off"
                 placeholder="Parol"
+                required
               />
             </Form.Group>
             <div className="securyt-text">
-              <Checkbox /> Saytdan <a href="#">foydalanish shartlariga</a>{" "}
-              roziman
+              <Checkbox style={{ fontSize: "12px" }} /> Saytdan{" "}
+              <a href="#">foydalanish shartlariga</a> roziman
             </div>
             <Form.Group>
               <ButtonToolbar>
-                <Button appearance="primary">Submit</Button>
-                <Button appearance="default">Cancel</Button>
+                <div className="login__btns">
+                  <Button
+                    as={"button"}
+                    appearance="primary"
+                    type="submit"
+                    onClick={handleSubmit}>
+                    Ro'yhatdan o'tish
+                  </Button>
+                  <NavLink to={"/login"}>
+                    <Button appearance="primary" color="green">
+                      Kirish
+                    </Button>
+                  </NavLink>
+                </div>
               </ButtonToolbar>
             </Form.Group>
           </Form>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
