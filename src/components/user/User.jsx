@@ -1,13 +1,15 @@
-const User = () => {
+const User = ({ item }) => {
   return (
-    <div className="top-list__user">
-      <div>1</div>
-      <div>
-        <span>Adham</span>
-        &nbsp;
-        <span>Jumaniyazov</span>
+    <>
+      <div className="top-list__user">
+        <div>{item.count}</div>
+        <div>
+          <span>{item.name}</span>
+          &nbsp;
+          <span>{item.lastName}</span>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

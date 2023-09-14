@@ -1,0 +1,200 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 10 * 20 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "100",
+          "b": "350",
+          "c": "300",
+          "d": "200"
+        },
+        "isTrue": "200"
+      }
+    },
+
+    {
+      "id": 2,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 101 * 0 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "11",
+          "b": "0",
+          "c": "10",
+          "d": "110"
+        },
+        "isTrue": "0"
+      }
+    },
+
+    {
+      "id": 3,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping:  7 * 11 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "17",
+          "b": "717",
+          "c": "77",
+          "d": "171"
+        },
+        "isTrue": "77"
+      }
+    },
+
+    {
+      "id": 4,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 101 * 22 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "1221",
+          "b": "2222",
+          "c": "2121",
+          "d": "2211"
+        },
+        "isTrue": "2222"
+      }
+    },
+    {
+      "id": 5,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 11 * 101 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "11111",
+          "b": "1101",
+          "c": "1111",
+          "d": "1011"
+        },
+        "isTrue": "1111"
+      }
+    },
+    {
+      "id": 6,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 10 * 20 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "100",
+          "b": "350",
+          "c": "300",
+          "d": "200"
+        },
+        "isTrue": "200"
+      }
+    },
+
+    {
+      "id": 7,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 101 * 0 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "11",
+          "b": "0",
+          "c": "10",
+          "d": "110"
+        },
+        "isTrue": "0"
+      }
+    },
+
+    {
+      "id": 8,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping:  7 * 11 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "17",
+          "b": "717",
+          "c": "77",
+          "d": "171"
+        },
+        "isTrue": "77"
+      }
+    },
+
+    {
+      "id": 9,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 101 * 22 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "1221",
+          "b": "2222",
+          "c": "2121",
+          "d": "2211"
+        },
+        "isTrue": "2222"
+      }
+    },
+    {
+      "id": 10,
+      "options": {
+        "category": "math",
+        "tile": "3-sinf matematikasi"
+      },
+      "questions": {
+        "title": "Ko'paytmani toping: 11 * 101 = ?"
+      },
+      "answers": {
+        "answers_text": {
+          "a": "11111",
+          "b": "1101",
+          "c": "1111",
+          "d": "1011"
+        },
+        "isTrue": "1111"
+      }
+    }
+  ]
+}

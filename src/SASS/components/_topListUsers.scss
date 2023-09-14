@@ -3,12 +3,19 @@ $secondary-color: #015a86af;
 $primary-color: #076f9f;
 $color-white: #eef6e6;
 .top-list {
+  position: sticky;
+  top: 28px;
   padding: 5px;
+  flex: 1;
   height: 500px;
   &__title {
     @include mixins.display-center;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.365);
+    background-color: #4caf50;
+    color: #eef6e6;
+    margin-bottom: 10px;
   }
   &__user {
     display: flex;
@@ -24,13 +31,44 @@ $color-white: #eef6e6;
       @include mixins.display-center;
       margin-right: 10px;
     }
-    &:nth-child(even) {
+    &:nth-child(2) {
       padding: 2px 6px;
       background-color: $primary-color;
       color: $color-white;
+      position: relative;
+      &::after {
+        content: url(https://i.ibb.co/K50Cghk/1.png);
+        position: absolute;
+        right: 10px;
+      }
+    }
+    &:nth-child(3) {
+      padding: 2px 6px;
+      background-color: #0888c3;
+      color: $color-white;
+      &::after {
+        content: url(https://i.ibb.co/8YZvdFQ/1.png);
+        position: absolute;
+        right: 10px;
+      }
+    }
+    &:nth-child(4) {
+      padding: 2px 6px;
+      background-color: #0998da;
+      color: $color-white;
+      &::after {
+        content: url(https://i.ibb.co/RTMnvpf/image.png);
+        position: absolute;
+        right: 10px;
+      }
     }
     &:not(:last-child) {
       margin-bottom: 5px;
     }
   }
+}
+.empty__text {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 13px;
 }
